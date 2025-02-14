@@ -1,16 +1,3 @@
-## Using NPM
-
-
-```bash
-npm i --legacy-peer-deps
-```
-
-## Using Bun
-
-```bash
-bun i && composer run dev
-```
-
 ## Setup
 
 ```bash
@@ -23,8 +10,14 @@ cp .env.example .env
 php artisan key:generate
 
 php artisan migrate --seed
+```
 
+## Run Program
+jalankan pada 2 terminal yang berbeda.
+```bash
 composer run dev
+
+php artisan reverb:start
 ```
 
 ## Login
