@@ -11,9 +11,23 @@ npm i --legacy-peer-deps
 bun i && composer run dev
 ```
 
-## Setting database
+## Setup
 
-Buat database (mysql atau sqlite) dan setting env kemudian jalankan:
 ```bash
+npm i --legacy-peer-deps
+
+composer i
+
+cp .env.example .env
+
+php artisan key:generate
+
 php artisan migrate --seed
+
+composer run dev
 ```
+
+## Login
+email : test@example.com
+
+password : password
