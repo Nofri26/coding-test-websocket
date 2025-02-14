@@ -27,7 +27,7 @@ export default function Edit({ score }: any) {
               <TextField
                 id="score_a"
                 label="Score A"
-                type="text"
+                type="number"
                 value={data.score_a}
                 className="mt-1 w-full"
                 onChange={(v) => setData('score_a', v)}
@@ -39,7 +39,7 @@ export default function Edit({ score }: any) {
               <TextField
                 id="score_b"
                 label="Score B"
-                type="text"
+                type="number"
                 value={data.score_b}
                 className="mt-1 w-full"
                 onChange={(v) => setData('score_b', v)}

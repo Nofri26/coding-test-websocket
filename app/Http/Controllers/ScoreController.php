@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Events\ScoreUpdated;
 use App\Http\Requests\Scores\StoreScoreRequest;
 use App\Models\Score;
+use App\Models\ScoreLog;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -50,5 +52,11 @@ class ScoreController extends Controller
             'Score updated.');
 
         return Redirect::route('scores.edit', $score);
+    }
+
+    public function getScoreLogs(): JsonResponse
+    {
+        $logs = ScoreLog::query()->orderBy('created_at', 'desc')->get();
+        return response()->json($logs);
     }
 }
